@@ -1,0 +1,438 @@
+/*TODO :
+_ convertir les fontes,
+_ passer le tout au validateur,
+_ faire valider !
+*/
+
+@font-face {
+    font-family: 'tengwar';
+
+    src: url('fonts/tengwar.ttf') format('truetype'),
+    	 url('fonts/tengwar-webfont.woff2') format('woff2'),
+         url('fonts/tengwar-webfont.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'partyBusiness';
+    src: url('fonts/partyBusiness.ttf') format('truetype'),
+       	 url('fonts/partybusiness-webfont.woff2') format('woff2'),
+         url('fonts/partybusiness-webfont.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'aniron';
+    src: url('fonts/aniron.ttf') format('truetype'),
+       	 url('fonts/aniron-webfont.woff2') format('woff2'),
+         url('fonts/aniron-webfont.woff') format('woff');
+}
+
+
+/* common variables */
+:root {
+	--orange: #FF5F01;
+}
+
+
+body {
+	font-family: aniron, serif;
+	background: url('bg_light.png') repeat;
+}
+
+
+
+/* font-size for main text components */
+h1 { font-size: 4rem }
+h2 { font-size: 3rem }
+h3 { font-size: 2rem }
+
+
+h2 small { color: inherit; }
+
+.barreMenu {
+	background-color: #FF5F01;
+	background-color: var( --orange );
+}
+
+/* THIS is ugly, and so is bootstrap with ist pixel-based spirit ! */
+ul.nav.navbar-nav { margin-top: 12px }
+
+/* separator between main menu entries */
+.nav li:not(:last-child) {
+    border-right: 1px solid white;
+}
+
+.navbar-default .navbar-nav > li > a,
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:focus,
+.navbar-default .navbar-nav > .active > a:hover {
+	background-color: transparent;
+	font-size: 1.1rem;
+
+	padding-top: 0;
+	padding-bottom: 0;
+}
+.navbar-default .navbar-nav > li > a,
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:focus { color: white }
+
+.navbar-default .navbar-nav > .active > a {	border-bottom: 3px solid white }
+}
+
+
+section {
+	/*padding: 1em;*/
+}
+
+section:nth-of-type(2n) {
+	background: url('bg_dark.png') repeat;
+	color: white;
+
+	/* for graceful backward compatibility */
+	border-top: 4px solid orange;
+	border-bottom: 4px solid orange;
+	/* real stuff */
+	border-width: 4px;
+	border-image: linear-gradient(to right, #fff 33%, var(--orange) 33%,
+									var(--orange) 67%, #fff 67%);
+}
+
+section:nth-of-type(2n+1) {
+	color: black;
+}
+
+
+section h2 {
+	margin-bottom: 1em;
+}
+
+section h2::before,
+section h2::after {
+	content: "ij";
+	font-family: tengwar,serif;
+	color: #FF5F01;
+	color: var( --orange );
+
+	margin: 1ex;
+}
+
+/* carousel */
+.carousel { margin-top: 48px }
+
+
+.item img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+}
+
+.carousel-caption > h1,
+.carousel-caption > h2 {
+	font-family: partyBusiness, serif;
+}
+.carousel-caption {
+	padding-bottom: 10%;
+}
+
+
+/* « Fellows » section */
+
+.nav > li > a {
+	color: grey;
+}
+.nav-pills > li.active > a {
+	color: #FF5F01;
+	color: var(--orange);
+
+	background-color: transparent;
+	
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+.nav-pills > li.active > a::before,
+.nav-pills > li.active > a::after, {
+	content: "ij";
+	font-family: tengwar,serif;
+	color: #FF5F01;
+	color: var( --orange );
+
+	margin: 1ex;
+}
+
+
+
+.wahooImage {
+	display: inline-block;
+	position: relative;
+
+	color: white;
+	background-color: black;
+	
+	margin: 0;
+	padding: 10px;
+	
+	text-align: center;
+}
+
+.wahooImage img { max-height: 360px }
+
+
+.opacifier {
+	position: absolute;
+
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+
+ 	background: black;
+	opacity: 0.5;
+	transition: opacity 0.5s;
+}
+.wahooImage:hover > .opacifier {
+	opacity: 0;
+	transition: opacity 0.5s;
+}
+
+.rewardHeader {
+	/* allow it not to be opacified by #opacifer : "z-index
+	works only with positionned elements", so we need to make
+	it relative before playing with z-index */
+	position: absolute;
+	box-sizing: border-box;
+	top: 2rem;
+	left: 2rem;
+	right: 2rem;
+	
+	display: inline-block;
+
+	padding: 0.25em;
+
+	color: black;
+	font-family: partyBusiness, serif;
+	font-size: 3.5rem;
+
+	background-color: rgba( 255,255,255, 0.5);
+	border-radius: 0.5em;
+
+	transition: transform 1s;
+}
+.wahooImage:hover > .rewardHeader {
+	transform: scale(0) rotate(1080deg);
+	transition: transform 1s;
+}
+
+.rewardHeader .goldy {
+	color: #FF5F01;
+	color: var(--orange);
+}
+
+.hisName {
+	position: absolute;
+	top: 50%;
+	/* setting "left" and "right" allow to center the element ! */
+	left: 2rem;
+	right: 2rem;
+	
+	z-index: 2;
+
+	font-size: 5.5rem;
+
+	text-align: center;
+	font-family: partyBusiness, serif;
+	font-weight: bold;
+
+	color: white;
+
+	transition: transform 0.5s, color 1s, text-shadow 1s;
+}
+
+.wahooImage:hover > .hisName {
+	transform: translateY(117%) scale(0.5);
+	color: black;
+	text-shadow: 1px 1px 1px white, -1px 1px 1px white,
+			 1px -1px 1px white, -1px -1px 1px white;
+
+	transition: transform 0.5s, color 1s, text-shadow 1s;
+}
+
+.deadHeader {
+	position: absolute;
+	top: 7%;
+	left: 2em;
+	right: 2em;
+
+	font-size: 3.2rem;
+	color: #FF5F01;
+	color: var( --orange );
+
+	transition: transform 0.5s;
+}
+.wahooImage:hover > .deadHeader {
+	transition: transform 0.5s;
+	animation: pulsatile 1s infinite alternate cubic-bezier(1, .18, .83, .67);
+}
+
+@keyframes pulsatile {
+	to {
+			transform: scale(2);
+			color: red;
+	}
+}
+
+
+.transitory {
+	position: absolute;
+	top: 45%;
+	width: 100%;
+
+
+	color: red;
+	font-weight: bold;
+	font-size: 5rem; 
+	text-shadow: 1px 1px 1px white, -1px 1px 1px white,
+			 1px -1px 1px white, -1px -1px 1px white;
+
+
+	opacity: 0;
+}
+.wahooImage:hover > .transitory {
+	animation: 2s ease-out both transitory;
+}
+
+@keyframes transitory {
+	0%   { opacity: 0 }
+	35%  { opacity: 1 }
+	100% { opacity: 0 }
+}
+
+
+/* « Our best hunters » section */
+
+.hunter {
+	font-family: partyBusiness, sans-serif;
+	font-size: 2.5rem;
+	padding: 1em;
+}
+
+.hunter h1,
+.goldy,
+.trapezoid,
+{
+	color: #FF5F01;
+	color: var(--orange);
+}
+
+.hunter h3 {
+	margin: 0;
+	font-size: 5rem;
+}
+
+.hunter a {
+	color: black;
+	text-decoration: underline;
+}
+
+.hunter h1,
+.hunter p { margin: 0; padding: 0 }
+
+
+.trapezoid {
+	display: inline-block;
+	padding: 0.3em;
+}
+
+section:nth-of-type(2n) .trapezoid {
+		background: url('bg_light.png') repeat;
+}
+section:nth-of-type(2n+1) .trapezoid {
+		background: url('bg_dark.png') repeat;
+}
+
+
+/* « About the Ring » section */
+
+.panel-title {
+	background-color: #FF5F01;
+	background-color: var(--orange);
+	color: white;
+	padding: 0.5em;
+}
+
+.panel {
+	background: url('bg_light.png') repeat;
+	color: #746F6C;
+
+	margin: 2.5% 5%;
+
+	border: none;
+	border-bottom: 4px solid #FF5F01;
+	border-bottom: 4px solid var(--orange);
+
+	border-top-left-radius: 0.5em;
+	border-top-right-radius: 0.5em;
+	overflow: hidden;
+}
+
+.panel-body { margin: 1em }
+
+
+table {
+	margin: auto;
+	width: 90%;
+}
+td {
+	border-bottom: 1px solid black;
+	padding: 0.4em;
+}
+thead td {
+	border-width: 2px;
+	font-weight: bold;
+	color: black;
+}
+
+
+/* « Join » section */
+
+.verticAlign {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.margeur {
+	margin-bottom: 1em;
+}
+
+p.goldy,
+p.goldy a {
+	word-break: break-all;
+	font-size: 2.3rem;
+	color: #FF5F01;
+	color: var(--orange);
+}
+
+
+/* « Contact us » section */
+
+.form-control {
+	margin: 0.5em;
+	padding: 0.2em;
+	color: grey;
+}
+
+
+
+footer {
+	background-color: #FF5F01;
+	background-color: var(--orange);
+
+	padding: 1em;
+}
+
+footer ul {
+	list-style-type: none;
+}
+footer a {	color: white }
+

@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Find the Precious</title>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+    <!-- specific to microsoft browser -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+   <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"></script>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+      crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+      integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+      crossorigin="anonymous"></script>
+
+
+    <link href="default.css" rel="stylesheet">
+
+    <!-- this stylesheet is loaded only when JS is'nt activated, and used mainly to hide .needJS elements -->
+    <noscript>
+        <link rel="stylesheet" href="noJS.css">
+    </noscript>
+
+</head>
+
+<body>
+ 
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid barreMenu">
+
+            <div class="navbar-header">
+                <img aria-hidden="true" src="logo.png" alt="FindThePrecious.com"
+                    title="See our powerfull ring integrated into our title !"
+                    class="navbar-brand">
+
+                <button type="button" class="navbar-toggle collapsed"
+                        data-toggle="collapse"
+                        data-target="#navbar"
+                        aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+
+            <div class="collapse navbar-collapse" id="navbar">
+                <ul class="nav navbar-nav">
+                    <li class="active">
+                        <a href="#fellows" title="list of must-die beings">Fellows</a>
+                    </li>
+                    <li>
+                        <a href="#ring" title="what the Ring can do">The Ring</a>
+                    </li>
+                    <li>
+                        <a href="#reward" title="how to get the money ?">Reward</a>
+                    </li>
+                    <li>
+                        <a href="#best" title="the Best Ones">Hunters</a>
+                    </li>
+                    <li>
+                        <a href="#join" title="Join Us for the victory of the dark side !">Join</a>
+                    </li>
+                    <li>
+                        <a href="#contact" title="Get in touch">Contact us</a>
+                    </li>
+                </ul>
+            </div> <!--#menuNav -->
+
+        </div> <!-- .container-fluid -->
+    </nav>
+
+
+    <!-- .needJS : should be hidden when JS is'nt activated | by CSS -->
+    <div class="carousel slide needJS" data-ride="carousel"
+        id="beautifulCarousel">
+
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <!-- to be displayed, the carousel needs at least one
+                 .active element -->
+            <li data-target="#carousel" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel" data-slide-to="1"></li>
+            <li data-target="#carousel" data-slide-to="2"></li>
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+            <div class="item active">
+                <img src="dark_vador.jpg"
+                      class="img-responsive"
+                      alt="Dark Vador fully support Sauron"
+                      title="Solidarity with Sauron">
+                <div class="carousel-caption">
+                    <h1>Sauron is a very good bro,</h1>
+                    <h2>please help him to find his ring!</h2>
+                </div>
+            </div>
+ 
+            <div class="item">
+                <img src="trump.png" class="img-responsive"
+                     alt="Trump totally agree with Us !"
+                     title="Solidarity with Sauron">
+                <div class="carousel-caption">
+                    <h1>keep back the honor of your master</h1>
+                    <h2>and make Mordor Great Again!</h2>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="orcs.jpg" class="img-responsive"
+                    alt="You should see here some orcs">
+                <div class="carousel-caption">
+                    <h1>we're on hunt for the ring !</h1>
+                    <h2>and you ?</h2>
+                </div>
+            
+            </div>
+
+        </div>
+
+        <!-- Controls -->
+        <a class="left carousel-control" href="#beautifulCarousel" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#beautifulCarousel" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+ 
+
+
+    <noscript>
+    <!-- for the few who use the net without JS, this part should be filled
+        with something static – but dunno what exactly now -->
+<!-- TODO : le truc de la checkbox pour fermeture de l'entière div -->
+        <h2>Fear the wrath of Sauron</h2>
+        <p>
+            This page needs JavaScript to be fully functional.
+            <br>
+            Enable it !
+            <br>
+            The Eye is watching you, and if you don't enable JavaScript quickly enough, the Master will know it and give your
+            Id to the nazgul.
+            <br>
+            You've been warned !
+        </p>
+    </noscript>
+    
+        
+    <section id="fellows" class="needJS">
+
+        <header class="container-fluid">
+            <div class="row">
+                <h2 class="col">
+                    Fellows wanted dead
+                    <small>
+                        (or alive if you want to eat them later)
+                    </small>
+                </h2>
+            </div>
+        </header>
+        
+        <!-- 3 Tab panels inside a stretched («nav-justified») boostrap tabs array -->
+        <div class="container-fluid">
+          
+          <div class="row">
+
+              <!-- the tab-bar ... -->  
+              <ul class="fellowMenu nav nav-pills nav-justified" role="tablist"
+              data-toggle="tab">
+
+                <li class="nav-item">
+                    <a class="nav-link active" data-toggle="tab" href="#mostWanted" role="tab">Most Wanted</a>
+                </li>
+
+                <li class="nav-item active">
+                    <a class="nav-link" data-toggle="tab" href="#mostDangerous" role="tab">Most Dangerous</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#alreadyCaptured"
+                        role="tab">Already captured</a>
+                </li>
+              </ul>
+
+          </div>
+
+          <!-- ... and its content -->
+          <div class="row">
+
+          <!-- first panel -->
+            <div id="mostWanted"
+                class="tab-content col-md-4">
+                <div class="wahooImage thumbnail">
+     
+                    <div class="opacifier"></div>
+            
+                    <p class="rewardHeader">
+                        reward<br>
+                        <span class="goldy">1000</span>
+                        golden coins
+                    </p>
+                    <p class="hisName">Gandalf</p>
+            
+                    <img class="img-responsive center-block"
+                        src="gandalf.png"
+                        alt="The portrait of an ugly pipe lover">
+    
+                    <p class="transitory">
+                        KILL HIM
+                    </p>
+            
+                    <p>A very dangerous pipe sucker and balrog killer</p>
+                </div>
+
+            </div>
+
+              <!-- second panel -->
+            <div id="mostDangerous"
+                class="tab-content col-md-4">
+                <div class="wahooImage thumbnail">
+
+                    <div class="opacifier"></div>
+            
+                    <p class="rewardHeader">
+                        reward<br>
+                        <span class="goldy">800</span>
+                        golden coins
+                    </p>
+                    <p class="hisName">Aragorn</p>
+            
+                    <img class="img-responsive center-block"
+                        src="aragorn.png"
+                        alt="the Face of a tasty and juicy human">
+
+                    <p class="transitory">
+                        KILL HIM
+                    </p>
+            
+                    <p>Sauron's finger says him his sword is dangerous</p>
+                </div>
+            </div>
+
+
+              <!-- third panel -->
+            <div id="alreadyCaptured"
+                class="tab-content col-md-4 margeur">
+                <div class="wahooImage thumbnail">
+                   
+                    <div class="opacifier"></div>
+                
+                    <p class="deadHeader">dead</p>
+                    <p class="hisName">Gimli</p>
+            
+                    <img class="img-responsive center-block"
+                        src="gimli.png"
+                        alt="Too late! Someone else ate him.">
+                    
+                    <p>A tasty dwarf, with a beard and an axe ...</p>
+                </div>
+            </div>
+
+           
+          </div> <!-- .row -->
+
+        </div>  
+
+    </section>
+    
+       
+        
+    <section id="reward" class="container-fluid">
+        
+        <div class="row">
+            <h2>I have captured one of them, how to get my reward ?</h2>
+        </div>
+
+        <div class="row">
+            <p class="col-sm-10">
+                Quapropter a natura mihi videtur potius quam ab indigentia orta amicitia, applicatione magis animi cum quodam sensu amandi
+                quam cogitatione quantum illa res utilitatis esset habitura. Quod quidem quale sit, etiam in bestiis quibusdam animadverti.
+            </p>
+            <img class="col-sm-2 img-circle" src="coin_sauron.png"
+                 alt="Your reward is goldy ...">
+        </div>
+
+        <div class="row center-block">
+            <div class="col center-block">
+                <a class="trapezoid" href="#contact" title="see the contact form">
+                    Contact Us
+                </a>
+            </div>
+        </div>
+
+    </section>
+        
+        
+    <section id="best" class="needJS container-fluid">
+        <div class="row">
+          <h2>Our best hunters</h2>
+        </div>    
+        
+        <div class="row">
+
+            <article class="hunter col-sm-6">
+              <div class="media">
+              
+                <div class="media-left media-middle">
+                    <img class="media-object" 
+                         src="hunter1.png" alt="the #1 killer">
+                </div>
+                
+                <div class="media-body media-middle">
+                    <h3>elveskiller22</h3>
+
+                    <p>
+                        2 captures –
+                        <span class="hunterProfile">
+                            <a href="profiles/ElvesKiller22" title="Profile Page">
+                            Profile</a>
+                        </span>
+                    </p>
+
+                    <p class="trapezoid goldy">
+                        12 race
+                    </p> 
+                </div>
+
+              </div> <!-- .media -->
+            </article>
+        
+            <article class="hunter col-sm-6">
+              <div class="media">
+                
+                <div class="media-left media-middle">
+                    <img class="media-object"
+                         src="hunter2.png" alt="the second one ...">
+                </div>
+                
+                <div class="media-body media-middle">
+                    <h3>goblin45</h3>
+            
+                    <p>
+                        1 capture – 
+                        <span class="hunterProfile">
+                            <a href="profiles/goblin45" title="Profile Page">
+                                Profile</a>
+                        </span>
+                    </p>
+            
+                    <p class="trapezoid goldy">
+                        18 race
+                    </p> 
+                </div>
+
+              </div>
+            </article>
+        
+
+        </div> <!-- .row -->
+    
+    </section>
+        
+         
+    <section id="ring">
+        <h2>About the Ring</h2>
+    
+        <div class="panel panel-default">
+            <h2 class="panel-title">Ring Capabilities</h2>
+
+            <div class="panel-body">
+                <p>What can our master Sauron do with the ring ?</p>
+    
+                <table>
+                    <thead>
+                        <tr>
+                            <td>Features</td>
+                            <td>Description</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Main</td>
+                            <td>One ring to rules them all</td>
+                        </tr>
+                        <tr>
+                            <td>Invisibility</td>
+                            <td>You can't see me</td>
+                        </tr>
+                        <tr>
+                            <td>Power</td>
+                            <td>blablabla</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div> <!-- .panel-body -->
+
+        </div>
+    
+        <div class="panel panel-default">
+            <h2 class="panel-title">Why is the Ring so awesome ?</h2>
+
+            <div class="panel-body media">
+               
+                <div class="media-body media-middle">
+                    <p>
+                        My preciouuuuuuuussssssss! ekkk, ekkk! We want our preeeeciiioooouuuusssssss!!!
+                    </p>
+                    <p class="text-right">– Gollum</p>
+                </div>
+         
+                <div class="media-right media-middle img-circle">
+                    <img class="media-object" 
+                         src="gollum.png" alt="someone pale and slimy">
+                </div>
+
+            </div> <!-- .panel-body .media -->
+    
+        </div>
+
+    </section>
+        
+        
+    <section id="join" class="container-fluid">
+        <header class="row">
+            <h2>Join Mordor Army, we need you !</h2>
+       </header>
+
+       <div class="row">
+            <div class="col-xs-6 verticAlign">
+                <p>
+                    Quapropter a natura mihi videtur potius quam ab indigentia orta amicitia, applicatione magis animi cum quodam sensu amandi
+                    quam cogitatione quantum illa res utilitatis esset habitura.
+                </p>
+            </div>
+
+            <div class="col-xs-6">
+                <img class="img-responsive"
+                 src="army.png"
+                 alt="Exciting image of blood-covered orc warriors">
+            </div> 
+        </div>
+
+       <div class="row">
+            <div class="col-xs-6">
+                <img class="img-responsive margeur"
+                    src="weneedyou.png"
+                    alt="The master is calling for you">
+            </div>
+
+            <div class="col-xs-6 verticAlign">
+                <p class="goldy">
+                    More info on
+                    <a class="trapezoid"
+                        href="https://SauronRulesThemAll.com/About"
+                        title="Just say yes">SauronRulesThemAll.com</a>
+                </p>
+            </div>   
+        </div>
+
+    </section>
+    
+        
+    <section id="contact" class="container-fluid">
+        <header class="row">
+            <h2 class="col">Contact us</h2>
+        </header>
+    
+        <div class="row">
+
+            <!-- non-JavaScript version of the action property -->
+            <form id="contactForm" class="col-sm-6 form"
+                method="post"
+                action="https://findtheprecious.com/contactus">
+    
+                <!-- ¿ needed p tag if we want text inside ? -->
+                <!-- Accessibility wants "label" tags ! -->
+                <div class="form-group">
+                    <label for="email">email</label>
+                    <input type="email" name="email"
+                        class="form-control"
+                        id="email"
+                        placeholder="Your email" required>
+        
+                    <label for="home">Home address</label>
+                    <input type="text" name="home" id="home"
+                        class="form-control"
+                        placeholder="Your home address" required>
+        
+                    <select name="reason" class="form-control">
+                        <option value="seen">I have seen one of them</option>
+                        <option value="captured">I have captured one of them</option>
+                        <option value="join">I want to join your army</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="msg">Your message to the Master</label>
+                    <textarea placeholder="Your message"
+                        class="form-control"
+                        name="msg" id="msg">Your message to the Master
+                    </textarea>
+                </div>
+        
+            </form>
+
+            <div class="col-sm-6">
+                <img class="img-responsive margeur" src="map.png" alt="your location">
+            </div>
+
+        </div> <!-- 2nd .row -->
+    
+    </section>
+        
+
+        
+    <footer class="container-fluid">
+        <div class="row">
+    
+            <ul class="col-sm-4">
+                <li>
+                    <a href="https://findtheprecious.com/about" title="about this site">about us</a>
+                </li>
+                <li>
+                    <a href="https://findtheprecious.com/fellows" title="Our allies">Fellows</a>
+                </li>
+                <li>
+                    <a href="https://findtheprecious.com/join" title="join us !">Join our army</a>
+                </li>
+            </ul>
+        
+            <ul class="col-sm-4">
+                <li>
+                    <a href="https://findtheprecious.com/faq" title="Frequently Asked Questions">FAQ</a>
+                </li>
+                <li>
+                    <a href="https://findtheprecious.com/reward" title="how to get your gold ?">Reward conditions</a>
+                </li>
+                <li>
+                    <a href="https://findtheprecious.com/legalities" title="borring stuff">Legal mentions</a>
+                </li>
+            </ul>
+        
+            <div class="col-sm-4">
+                <ul>
+                    <li>
+                        <a href="https://sauron4forever.com" title="All about our master !">Sauron4Ever.com</a>
+                    </li>
+                    <li>
+                        <a href="https://didYouSeeMyAwesomUrl" title="birdy stuff">Follow Him also on twitter</a>
+                    </li>
+                </ul>
+
+                <img src="logo.png" alt="" aria-hidden="true">
+            </div>
+
+
+        </div>
+    </footer>
+    
+
+
+        
+</body>
+        
+</html>
