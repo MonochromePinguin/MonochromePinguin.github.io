@@ -248,7 +248,7 @@ section h2::after {
 }
 
 .wahooImage:hover > .hisName {
-	transform: translateY(117%) scale(0.5);
+	transform: translateY(90%) scale(0.5);
 	color: black;
 	text-shadow: 1px 1px 1px white, -1px 1px 1px white,
 			 1px -1px 1px white, -1px -1px 1px white;
@@ -283,7 +283,7 @@ section h2::after {
 
 .transitory {
 	position: absolute;
-	top: 45%;
+	top: 30%;
 	width: 100%;
 
 
